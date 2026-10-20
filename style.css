@@ -195,6 +195,7 @@ details.day-item[open] .task-count::after {
 }
 
 /* Task Links / Buttons */
+.task-links button,
 .task-links a {
     display: inline-flex;
     align-items: center;
@@ -207,15 +208,46 @@ details.day-item[open] .task-count::after {
     background: var(--pill-bg);
     color: var(--pill-text);
     border: 1px solid var(--pill-border);
+    cursor: pointer;
+    font-family: inherit;
     transition: all 0.15s ease;
 }
 
+.task-links button:hover,
 .task-links a:hover {
     background-color: var(--btn-hover-bg);
     color: var(--btn-hover-text);
     border-color: var(--btn-hover-bg);
     transform: translateY(-1px);
 }
+
+/* Inline Code Preview */
+.code-preview-box {
+    width: 100%;
+    margin-top: 10px;
+    background: #1e1e24;
+    border-radius: 8px;
+    padding: 16px;
+    color: #d4d4d8;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    display: none;
+}
+.code-preview-box.show {
+    display: block;
+    animation: slideDown 0.18s ease;
+}
+.code-preview-box pre {
+    margin: 0;
+}
+.code-preview-box .kw { color: #c678dd; font-weight: 600; }
+.code-preview-box .fn { color: #61afef; }
+.code-preview-box .str { color: #98c379; }
+.code-preview-box .num { color: #d19a66; }
+.code-preview-box .op { color: #56b6c2; }
+.code-preview-box .var { color: #e06c75; }
 
 .no-task-note {
     font-size: 0.8rem;

@@ -28,16 +28,58 @@
             </div>
         </details>
 
-        <details class="day-item">
+        <details class="day-item" open>
             <summary>
                 <span class="day-title">Day 02</span>
                 <span class="task-count">1 task</span>
             </summary>
             <div class="task-links">
-                <a href="Python/Day2/matchcase.html" target="_blank" rel="noopener noreferrer">matchcase.py</a>
+                <button type="button" onclick="toggleCode('code-day2')">👁️ View Code (Inline)</button>
+                <a href="Python/Day2/matchcase.html" target="_blank" rel="noopener noreferrer">Open in New Tab &rarr;</a>
+                <div id="code-day2" class="code-preview-box">
+                    <pre><code><span class="var">choice</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="str">"Enter your choice 1-4: "</span>))
+<span class="kw">match</span> <span class="var">choice</span>:
+    <span class="kw">case</span> <span class="num">1</span>:
+        <span class="fn">print</span>(<span class="str">"Pizza"</span>)
+    <span class="kw">case</span> <span class="num">2</span>:
+        <span class="fn">print</span>(<span class="str">"Burger"</span>)
+    <span class="kw">case</span> <span class="num">3</span>:
+        <span class="fn">print</span>(<span class="str">"Pasta"</span>)
+    <span class="kw">case</span> <span class="num">4</span>:
+        <span class="fn">print</span>(<span class="str">"Fried Rice"</span>)
+    <span class="kw">case</span> <span class="kw">_</span>:
+        <span class="fn">print</span>(<span class="str">"Invalid choice"</span>)
+
+
+<span class="var">district</span> <span class="op">=</span> <span class="fn">input</span>(<span class="str">"Enter the district name: "</span>)
+<span class="kw">match</span> <span class="var">district</span>:
+    <span class="kw">case</span> <span class="str">"Chennai"</span>:
+        <span class="fn">print</span>(<span class="str">"Filter coffee"</span>)
+    <span class="kw">case</span> <span class="str">"Madurai"</span>:
+        <span class="fn">print</span>(<span class="str">"Jigarthanda"</span>)
+    <span class="kw">case</span> <span class="str">"Tirunelveli"</span>:
+        <span class="fn">print</span>(<span class="str">"Halwa"</span>)
+    <span class="kw">case</span> <span class="str">"Thoothukudi"</span>:
+        <span class="fn">print</span>(<span class="str">"Macaroons"</span>)
+    <span class="kw">case</span> <span class="str">"Dindigul"</span>:
+        <span class="fn">print</span>(<span class="str">"Biryani"</span>)
+    <span class="kw">case</span> <span class="str">"Coimbatore"</span>:
+        <span class="fn">print</span>(<span class="str">"Kothu Parotta"</span>)
+    <span class="kw">case</span> <span class="kw">_</span>:
+        <span class="fn">print</span>(<span class="str">"District not added yet"</span>)</code></pre>
+                </div>
             </div>
         </details>
     </div>
+
+    <script>
+        function toggleCode(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('show');
+            }
+        }
+    </script>
 
 </body>
 </html>
